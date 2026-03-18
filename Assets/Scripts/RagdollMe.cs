@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public struct JointData
 {
@@ -16,6 +17,8 @@ public class RagdollMe : MonoBehaviour
 {
     Animator animator;
     public JointData[] jointData;
+    public NavMeshAgent nm;
+    public float impactForce;
 
     void Start()
     {
@@ -76,7 +79,7 @@ public class RagdollMe : MonoBehaviour
                 currentCol.enabled = !enabled;
             }
 
-            else 
+            else
             {
                 col.enabled = enabled;
             }
@@ -85,13 +88,13 @@ public class RagdollMe : MonoBehaviour
 
     public void Ragdoll(Vector3 impact)
     {
-        if (impact.magnitude < 4f)
+        if (impact.magnitude < impactForce)
         {
             return;
         }
 
         SetChildColliders(true);
-
+        nm.enabled = false;
         animator.enabled = false;
     }
 
