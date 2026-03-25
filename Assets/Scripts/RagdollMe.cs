@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,6 +20,13 @@ public class RagdollMe : MonoBehaviour
     public JointData[] jointData;
     public NavMeshAgent nm;
     public float impactForce;
+
+    public GameManager gm;
+
+    void Awake()
+    {
+        gm = FindAnyObjectByType<GameManager>();
+    }
 
     void Start()
     {
@@ -43,6 +51,8 @@ public class RagdollMe : MonoBehaviour
 
             joint.previousForce = joint.joint.currentForce.magnitude;
         }
+
+
     }
 
     Joint[] GetAllJoints()
@@ -96,6 +106,8 @@ public class RagdollMe : MonoBehaviour
         SetChildColliders(true);
         nm.enabled = false;
         animator.enabled = false;
+
+        gm.impacts.Add(impact.magnitude);
     }
 
     private void OnCollisionEnter(Collision collision)
