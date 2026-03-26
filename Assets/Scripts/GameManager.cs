@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public bool isRunning = false;
 
     public GameObject bot, scoreSign;
-    public RagdollMe force;
 
     private List<Animator> botList;
 
