@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6301375158991796025}
   m_Layer: 0
   m_Name: Y Bot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RagdollMe
   nm: {fileID: 5377019712944186696}
   impactForce: 10
-  impactScore: 0
   gm: {fileID: 0}
 --- !u!136 &9005641515483912299
 CapsuleCollider:

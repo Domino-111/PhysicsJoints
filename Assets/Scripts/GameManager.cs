@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
             }
 
             scoreSign.SetActive(true);
-            score = impacts.Sum();
+            score += impacts.Sum();
             scoreTotal = Mathf.RoundToInt(score);
             scoreText.text = "Score: " + scoreTotal;
         }

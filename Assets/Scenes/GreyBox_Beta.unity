@@ -1207,7 +1207,6 @@ MonoBehaviour:
   isRunning: 0
   bot: {fileID: 19230048412094032, guid: 5940e5648104cf545a584e0e6c7d0661, type: 3}
   scoreSign: {fileID: 2058771125}
-  force: {fileID: 8280432935420044507, guid: 5940e5648104cf545a584e0e6c7d0661, type: 3}
   impacts: []
   score: 0
   scoreTotal: 0
@@ -3933,6 +3932,55 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1956860521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956860523}
+  - component: {fileID: 1956860522}
+  m_Layer: 0
+  m_Name: Point Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1956860522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956860521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 067320d46e4e6454990cde1ea8630bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointSpawner
+  normalPoints: {fileID: 2115333805827887308, guid: ff756f01671fc424ea01a0eaf385c750, type: 3}
+  specialPoints: {fileID: 8501311465726151222, guid: dd216586389ef0a418e734e0ac03380b, type: 3}
+  specialSpawned: 0
+  timer: 3
+  resetTime: 3
+--- !u!4 &1956860523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956860521}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2058771125
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,3 +4321,4 @@ SceneRoots:
   - {fileID: 721053923}
   - {fileID: 802051099}
   - {fileID: 1381386983}
+  - {fileID: 1956860523}
